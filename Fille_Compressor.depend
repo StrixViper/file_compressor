@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1726939383 source:c:\users\shnav\onedrive\pictures\documents\file_compressor\fille_compressor\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"compressor.h"
+	"decompressor.h"
+	"utils.h"
+
+1726939264 c:\users\shnav\onedrive\pictures\documents\file_compressor\fille_compressor\compressor.h
+
+1726939264 c:\users\shnav\onedrive\pictures\documents\file_compressor\fille_compressor\decompressor.h
+
+1726939326 c:\users\shnav\onedrive\pictures\documents\file_compressor\fille_compressor\utils.h
+	<stdio.h>
+
+1726939264 c:\users\shnav\onedrive\pictures\documents\file_compressor\fille_compressor\compressor.c
+	<stdio.h>
+	<stdlib.h>
+	"compressor.h"
+	"utils.h"
+
+1726938625 c:\users\shnav\onedrive\pictures\documents\file_compressor\fille_compressor\utils.c
+	<stdio.h>
+	<stdlib.h>
+	"utils.h"
+
+1726939294 c:\users\shnav\onedrive\pictures\documents\file_compressor\fille_compressor\decompressor.c
+	<stdio.h>
+	<stdlib.h>
+	"decompressor.h"
+	"utils.c"
+

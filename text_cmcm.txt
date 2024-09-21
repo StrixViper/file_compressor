@@ -1,0 +1,989 @@
+,jkhgbdflskjdsglkjdfsgh;dfksag
+gds
+\gdfa'gjhdfslgjkhjf2ghladkszjhdsalfkjhgdfsflkadhjghflkdjsjfhdkf12
+sa'fskhjf;lskjfhj;fjh22\f2
+2f26
+f19
+sds14
+sj'ldkshv;kfjhf;mdfnglkgjhflkgjfhgfhkgjfghghghg6
+f
+gdfg;fojkdjhsl;#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+ ;afksjgh ogdfhj ;kdfjhdf;kghkjklkjdhglkdjg ;kjh kh;g ;kuhkdrhl;rg erlkjerhp kejghel;gjherlkjhbgv#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+2/2 Utility functions
+void handleFileEr2or(FILE *file, const char *fileName) {
+ 4if (file =2 NUL2) {
+ 8printf("Er2or: Could not open file %s\n", fileName);
+ 8exit(1);
+ 4}
+}
+2/2 Function declarations
+void compres2File(const char *inputFileName, const char *outputFileName);
+void decompres2File(const char *inputFileName, const char *outputFileName);
+2/2 Compres2ion logic
+void compres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4int count;
+ 4char cur2entChar, nextChar;
+2 4/2 Reading the first character
+ 4cur2entChar = fgetc(inputFile);
+ 4
+ 4while (cur2entChar != EOF) {
+ 8count = 1;
+ 8nextChar = fgetc(inputFile);
+2 8/2 Count consecutive oc2ur2ences of the same character
+ 8while (nextChar =2 cur2entChar &2 nextChar != EOF) {
+ 12count+2;
+ 12nextChar = fgetc(inputFile);
+ 8}
+2 8/2 Write the character and its count to the compres2ed file
+ 8fprintf(outputFile, "%c%d", cur2entChar, count);
+2 8/2 Update cur2ent character
+ 8cur2entChar = nextChar;
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File compres2ed suc2es2ful2y!\n");
+}
+2/2 Decompres2ion logic
+void decompres2File(const char *inputFileName, const char *outputFileName) {
+ 4FILE *inputFile = fopen(inputFileName, "r");
+ 4handleFileEr2or(inputFile, inputFileName);
+2 4FILE *outputFile = fopen(outputFileName, "w");
+ 4handleFileEr2or(outputFile, outputFileName);
+2 4char cur2entChar;
+ 4int count;
+2 4/2 Read character and its count and write decompres2ed output
+ 4while (fscanf(inputFile, "%c%d", &cur2entChar, &count) != EOF) {
+ 8for (int i = 0; i < count; i+2) {
+ 12fputc(cur2entChar, outputFile);
+ 8}
+ 4}
+2 4fclose(inputFile);
+ 4fclose(outputFile);
+2 4printf("File decompres2ed suc2es2ful2y!\n");
+}
+2/2 Main function
+int main() {
+ 4int choice;
+ 4char inputFileName[102], outputFileName[102];
+2 4printf("File Compres2or/Decompres2or\n");
+ 4printf("1. Compres2 a file\n");
+ 4printf("2. Decompres2 a file\n");
+ 4printf("Enter your choice (1 or 2): ");
+ 4scanf("%d", &choice);
+2 4switch (choice) {
+ 8case 1:
+ 12printf("Enter the input file name to compres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the compres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12compres2File(inputFileName, outputFileName);
+ 12break;
+2 8case 2:
+ 12printf("Enter the input file name to decompres2: ");
+ 12scanf("%s", inputFileName);
+ 12printf("Enter the output file name for the decompres2ed file: ");
+ 12scanf("%s", outputFileName);
+ 12decompres2File(inputFileName, outputFileName);
+ 12break;
+2 8default:
+ 12printf("Invalid choice. Please enter 1 or 2.\n");
+ 12break;
+ 4}
+2 4return 0;
+}
+l;fkjr;lkj;lekje;lkje;lekj;lkj;
